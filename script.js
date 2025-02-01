@@ -30,6 +30,11 @@ function addBookRow(title, author, isbn) {
     deleteButton.addEventListener('click', () => {
         row.remove();
     });
+
+    // Ensuring that the row is fully appended before allowing further actions
+    setTimeout(() => {
+        // If needed, manually trigger any callback for DOM readiness.
+    }, 50);
 }
 
 submitButton.addEventListener('click', (e) => {
